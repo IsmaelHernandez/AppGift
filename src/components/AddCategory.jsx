@@ -18,9 +18,9 @@ const AddCategory = ({NewCategory}) => {
         setInputValue('')
     }
   return (
-    <div>
+    <div className='container__category'>
         <form onSubmit={(e) => onSubmit(e)}>
-            <input type="text" onChange={(e) => onInputChange(e)} value={inputValue} placeholder="Buscar gifs" />
+            <input className='input__center' type="text" onChange={(e) => onInputChange(e)} value={inputValue} placeholder="Buscar gifs" />
             {/* <button>Add Category</button> */}
         </form>
     </div>

@@ -2,6 +2,8 @@ import "./App.css";
 import { useState } from "react";
 import AddCategory from "./components/AddCategory";
 import GifGrid from "./components/GifGrid";
+import Header from "./components/Header";
+import Footer from "./components/Footer"
 
 
 const App = () => {
@@ -17,7 +19,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>GifExpertApp</h1>
+      <Header />
+      <div className='container__letter'>
+        <h1 className="">AppGif</h1>
+      </div>
       {/* agregar Gif */}
       <AddCategory NewCategory={(value) => onAddCategory(value)} />
       {/* listado de Gif */}
@@ -26,6 +31,7 @@ const App = () => {
           <GifGrid  category={category} key={category} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
